@@ -15,12 +15,11 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         User::firstOrCreate(
-            ['email' => 'admin@tokobaju.com'],
+            ['username' => 'admin'],
             [
                 'name' => 'Administrator',
                 'password' => Hash::make('12345678'),
                 'role' => 'admin',
-                'email_verified_at' => now(),
             ]
         );
     }
